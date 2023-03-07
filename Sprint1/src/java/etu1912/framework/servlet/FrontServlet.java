@@ -5,7 +5,9 @@
  */
 package etu1912.framework.servlet;
 
+import etu1912.framework.Mapping;
 import java.io.IOException;
+import java.util.HashMap;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -17,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author ITU
  */
 public class FrontServlet extends HttpServlet {
-
+    HashMap<String,Mapping> MappingUrls;
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
