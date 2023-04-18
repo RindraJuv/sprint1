@@ -6,14 +6,18 @@
 package etu1912.framework.servlet;
 
 import etu1912.framework.Mapping;
+import etu1912.framework.ModelView;
 import etu1912.framework.fonction.Utilitaire;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.lang.reflect.*;
 
 /**
  *
@@ -54,9 +58,37 @@ public class FrontServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
                 processRequest(request, response);
-                request.setAttribute("soratra",MappingUrls);
-                RequestDispatcher dispat = request.getRequestDispatcher("/Affichage/main.jsp"); 
-		dispat.forward(request,response);
+                
+                
+                String redirection = null; 
+                try{
+                    String[] url = new Utilitaire().getUrlEnCours(request.getRequestURI());
+                    System.out.println("url io : "+request.getRequestURI());
+                    String slug = url[url.length - 1];
+                    if(url.length==2){
+                        RequestDispatcher dispat = request.getRequestDispatcher("/Affichage/index.jsp"); 
+                        dispat.forward(request,response);
+                    }
+                    if(MappingUrls.containsKey(slug)){
+                        Mapping map = MappingUrls.get(slug);
+                        Class clas = Class.forName(map.getCla());
+                //Class clas = Employer.class;
+                        Method fonction = clas.getDeclaredMethod(map.getMethod());
+                //fonction.setAccessible(false);
+                        ModelView page = (ModelView) fonction.invoke(clas.newInstance());
+                        redirection = page.getView();
+                        HashMap<String,Object> l = page.getListe();
+                        for(HashMap.Entry<String, Object>entry : l.entrySet()){
+                            request.setAttribute(entry.getKey(),entry.getValue());
+                        }
+                        
+                    }
+                    RequestDispatcher dispat = request.getRequestDispatcher("/Affichage/"+redirection); 
+                    dispat.forward(request,response);
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+                
     }
 
     /**

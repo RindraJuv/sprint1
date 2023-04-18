@@ -89,7 +89,10 @@ public class Utilitaire {
          Vector<String> paks = this.getNomPackages(null,path,null);
          Vector<Class> cla = this.getClassViaPackage(paks);
          addMapping(mappingUrls,cla);
-         
+     }
+     public String[] getUrlEnCours(String str){
+         String[] resultat = str.split("/");
+         return resultat;
      }
     
 }
