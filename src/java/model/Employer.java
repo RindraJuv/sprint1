@@ -73,14 +73,23 @@ public class Employer {
         return emp;
     }
     public Employer() {
+<<<<<<< Updated upstream
     }
 
     public Employer() {
+=======
+>>>>>>> Stashed changes
     }
     @AnnotationUrl(url = "ajout-emp")
     public ModelView ajouterEmployer() {
         ModelView view = new ModelView("main.jsp");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+        Employer[] e = this.getInfoEmp();
+        view.executeHash("information", e);
+       
+>>>>>>> Stashed changes
 =======
         Employer[] e = this.getInfoEmp();
         view.executeHash("information", e);

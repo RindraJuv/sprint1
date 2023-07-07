@@ -26,7 +26,11 @@ public class Main {
       
         try{
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             String slug = "ajout-emp";
+=======
+           /* String slug = "ajout-emp";
+>>>>>>> Stashed changes
 =======
            /* String slug = "ajout-emp";
 >>>>>>> Stashed changes
@@ -40,11 +44,14 @@ public class Main {
                 ModelView page = (ModelView) fonction.invoke(clas.newInstance());
                 System.out.println("okok : "+page.getView());
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             }
         }catch(Exception e){
             e.printStackTrace();
         }
 =======
+=======
+>>>>>>> Stashed changes
             }*/
           /* Employer e = new Employer();
            ModelView mod = e.ajouterEmployer();
@@ -58,6 +65,9 @@ public class Main {
         }catch(Exception e){
             e.printStackTrace();
         }*/
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         /*for(HashMap.Entry<String, Mapping>entry : mappingUrls.entrySet()){
             try {

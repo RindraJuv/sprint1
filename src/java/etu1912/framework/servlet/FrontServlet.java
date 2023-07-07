@@ -10,6 +10,12 @@ import com.google.gson.Gson;
 import etu1912.framework.Mapping;
 import etu1912.framework.ModelView;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+import etu1912.framework.annoter.AnnotationPrivilege;
+import etu1912.framework.annoter.AnnotationSingle;
+import etu1912.framework.annoter.AnnotationUrl;
+>>>>>>> Stashed changes
 =======
 import etu1912.framework.annoter.AnnotationPrivilege;
 import etu1912.framework.annoter.AnnotationSingle;
@@ -30,11 +36,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.lang.reflect.*;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 import java.util.Vector;
 import model.Employer;
 import java.lang.Class;
 import javax.servlet.http.HttpSession;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 /**
@@ -155,8 +167,14 @@ public class FrontServlet extends HttpServlet {
             throws ServletException, IOException {
                 processRequest(request, response);
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 
                 request.setAttribute("soratra",MappingUrls);
+=======
+               
+                /*Employer e = new Employer();
+                e.setNom("Rija");*/
+>>>>>>> Stashed changes
 =======
                
                 /*Employer e = new Employer();
@@ -175,6 +193,7 @@ public class FrontServlet extends HttpServlet {
                         Mapping map = MappingUrls.get(slug);
                         Class clas = Class.forName(map.getCla());
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 //Class clas = Employer.class;
                         Method fonction = clas.getDeclaredMethod(map.getMethod());
                 //fonction.setAccessible(false);
@@ -184,6 +203,8 @@ public class FrontServlet extends HttpServlet {
                     RequestDispatcher dispat = request.getRequestDispatcher("/Affichage/"+redirection); 
                     dispat.forward(request,response);
 =======
+=======
+>>>>>>> Stashed changes
                         Object o = verificationSingleton(clas,singleton);
                         
                         try{
@@ -273,6 +294,9 @@ public class FrontServlet extends HttpServlet {
                         
                     }
                     
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         }catch(Exception e){
             e.printStackTrace();
