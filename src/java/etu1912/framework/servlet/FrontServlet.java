@@ -10,6 +10,12 @@ import com.google.gson.Gson;
 import etu1912.framework.Mapping;
 import etu1912.framework.ModelView;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+import etu1912.framework.annoter.AnnotationPrivilege;
+import etu1912.framework.annoter.AnnotationSingle;
+import etu1912.framework.annoter.AnnotationUrl;
+>>>>>>> Stashed changes
 =======
 import etu1912.framework.annoter.AnnotationPrivilege;
 import etu1912.framework.annoter.AnnotationSingle;
@@ -30,11 +36,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.lang.reflect.*;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 import java.util.Vector;
 import model.Employer;
 import java.lang.Class;
 import javax.servlet.http.HttpSession;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 /**
@@ -155,8 +167,14 @@ public class FrontServlet extends HttpServlet {
             throws ServletException, IOException {
                 processRequest(request, response);
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 
                 request.setAttribute("soratra",MappingUrls);
+=======
+               
+                /*Employer e = new Employer();
+                e.setNom("Rija");*/
+>>>>>>> Stashed changes
 =======
                
                 /*Employer e = new Employer();
@@ -175,6 +193,7 @@ public class FrontServlet extends HttpServlet {
                         Mapping map = MappingUrls.get(slug);
                         Class clas = Class.forName(map.getCla());
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 //Class clas = Employer.class;
                         Method fonction = clas.getDeclaredMethod(map.getMethod());
                 //fonction.setAccessible(false);
@@ -187,16 +206,30 @@ public class FrontServlet extends HttpServlet {
                         Object o = verificationSingleton(clas,singleton);
                         
                         try{
+=======
+                        Object o = verificationSingleton(clas,singleton);
+                        
+                        /*try{
+>>>>>>> Stashed changes
                             Object ooj = verificationSingleton(clas,singleton);
                             System.out.println("okayokay : "+ooj.getClass().getName());
                         }catch(Exception e){
                         e.printStackTrace();
+<<<<<<< Updated upstream
                         }
                         
                         
                         for(HashMap.Entry<String, Object>entry : singleton.entrySet()){
                             System.out.println("lacles : "+entry.getKey()+" valeurs : "+entry.getValue().getClass().getName());
                         }
+=======
+                        }*/
+                        
+                        
+                        /*for(HashMap.Entry<String, Object>entry : singleton.entrySet()){
+                            System.out.println("lacles : "+entry.getKey()+" valeurs : "+entry.getValue().getClass().getName());
+                        }*/
+>>>>>>> Stashed changes
                         getValeurFromUser(request, o);
                         request.setAttribute("detail",o);
                         //Class clas = Employer.class;
@@ -205,11 +238,17 @@ public class FrontServlet extends HttpServlet {
                         System.out.println("anarany le fonction : "+fonction.getName());
                         //fonction.setAccessible(false);
                         ModelView page = new ModelView();
+<<<<<<< Updated upstream
                         page = (ModelView) fonction.invoke(o);
                         redirection = page.getView();
                         RequestDispatcher dispat = request.getRequestDispatcher("/Affichage/"+redirection); 
                         dispat.forward(request,response);
                         /*HttpSession session = request.getSession();
+=======
+                        //page = (ModelView) fonction.invoke(o);
+                        
+                        HttpSession session = request.getSession();
+>>>>>>> Stashed changes
                         System.out.println("valeur : "+session.getAttribute("admin"));
                         System.out.println("valeur1 : "+fonction.getAnnotation(AnnotationUrl.class).url());
                         //page = (ModelView) fonction.invoke(o);
@@ -243,7 +282,11 @@ public class FrontServlet extends HttpServlet {
                         for(HashMap.Entry<String, Boolean>entry : vr.entrySet()){
                             session.setAttribute(entry.getKey(),entry.getValue());
                             System.out.println("Ts admin ianao : "+entry.getKey()+entry.getValue());
+<<<<<<< Updated upstream
                         }*/
+=======
+                        }
+>>>>>>> Stashed changes
                         /*if(page.isIsJson()) {
                                 Gson gson = new Gson();
                                 String json = gson.toJson(page.getListe());
@@ -273,6 +316,9 @@ public class FrontServlet extends HttpServlet {
                         
                     }
                     
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         }catch(Exception e){
             e.printStackTrace();
