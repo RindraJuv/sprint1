@@ -13,5 +13,15 @@
     </head>
     <body>
         <h1>Welcome to our FrameWork!</h1>
+<<<<<<< Updated upstream
+=======
+        <form action="Sprint1/ajout-emp">
+            <p>Nom :</p>
+            <input type="text" name="nom">
+            <p>Mot de passe :</p>
+            <input type="text" name="mdp">
+            <input type="submit" value="Envoyer">   
+        </form>
+>>>>>>> Stashed changes
     </body>
 </html>
