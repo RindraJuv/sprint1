@@ -20,14 +20,16 @@ public class Main {
     public static void main(String[] args){
         Utilitaire u = new Utilitaire();
         HashMap<String, Mapping> mappingUrls = new HashMap<>();
-        
-        String path = "C:\\Users\\ITU\\Documents\\NetBeansProjects\\Sprint1\\build\\web\\WEB-INF\\classes";
-        Vector<String> str = u.getNomPackages(null,path,null);
+        /*Vector<String> str = u.getNomPackages(null,path,null);
         Vector<Class> cla = u.getClassViaPackage(str);
         u.allMapping(mappingUrls);
       
         try{
+<<<<<<< Updated upstream
             String slug = "ajout-emp";
+=======
+           /* String slug = "ajout-emp";
+>>>>>>> Stashed changes
             
             if(mappingUrls.containsKey(slug)){
                 Mapping map = mappingUrls.get(slug);
@@ -37,10 +39,26 @@ public class Main {
                 //fonction.setAccessible(false);
                 ModelView page = (ModelView) fonction.invoke(clas.newInstance());
                 System.out.println("okok : "+page.getView());
+<<<<<<< Updated upstream
             }
         }catch(Exception e){
             e.printStackTrace();
         }
+=======
+            }*/
+          /* Employer e = new Employer();
+           ModelView mod = e.ajouterEmployer();
+           Employer[] em = new Employer[4];
+           HashMap<String,Object> l = mod.getListe();
+           for(HashMap.Entry<String, Object>entry : l.entrySet()){
+               em = (Employer[]) entry.getValue();
+               System.out.println(em[0].getNom());
+               System.out.println(entry.getKey());
+           }
+        }catch(Exception e){
+            e.printStackTrace();
+        }*/
+>>>>>>> Stashed changes
         /*for(HashMap.Entry<String, Mapping>entry : mappingUrls.entrySet()){
             try {
                         Class clas = Class.forName(entry.getValue().getCla());
@@ -59,8 +77,8 @@ public class Main {
         /*for(int i=0;i<str.size();i++){
             System.out.println(str.get(i));
         }*/
-        for(int i=0;i<cla.size();i++){
+        /*for(int i=0;i<cla.size();i++){
             System.out.println(cla.get(i).getSimpleName());
-        }
+        }*/
     }
 }
