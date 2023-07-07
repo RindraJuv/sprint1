@@ -12,14 +12,18 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/ITU/Documents/NetBeansProjects/Sprint1/src/java/etu1912/framework/Mapping.java</file>
-            <file>file:/C:/Users/ITU/Documents/NetBeansProjects/Sprint1/src/java/model/Employer.java</file>
-            <file>file:/C:/Users/ITU/Documents/NetBeansProjects/Sprint1/src/java/etu1912/framework/servlet/FrontServlet.java</file>
-            <file>file:/C:/Users/ITU/Documents/NetBeansProjects/Sprint1/src/java/etu1912/framework/annoter/AnnotationUrl.java</file>
-            <file>file:/C:/Users/ITU/Documents/NetBeansProjects/Sprint1/src/java/fonction/Utilitaire.java</file>
-            <file>file:/C:/Users/ITU/Documents/NetBeansProjects/Sprint1/web/index.html</file>
-            <file>file:/C:/Users/ITU/Documents/NetBeansProjects/Sprint1/src/java/fonction/Main.java</file>
-            <file>file:/C:/Users/ITU/Documents/NetBeansProjects/Sprint1/web/Affichage/main.jsp</file>
+            <file>file:/C:/Users/ITU/Documents/NetBeansProjects/sprint1/web/Affichage/main.jsp</file>
+            <file>file:/C:/Users/ITU/Documents/NetBeansProjects/sprint1/src/java/etu1912/framework/Mapping.java</file>
+            <file>file:/C:/Users/ITU/Documents/NetBeansProjects/sprint1/src/java/etu1912/framework/annoter/AnnotationPrivilege.java</file>
+            <file>file:/C:/Users/ITU/Documents/NetBeansProjects/sprint1/src/java/etu1912/framework/annoter/AnnotationUrl.java</file>
+            <file>file:/C:/Users/ITU/Documents/NetBeansProjects/sprint1/src/java/etu1912/framework/ModelView.java</file>
+            <file>file:/C:/Users/ITU/Documents/NetBeansProjects/sprint1/src/java/model/Employer.java</file>
+            <file>file:/C:/Users/ITU/Documents/NetBeansProjects/sprint1/src/java/etu1912/framework/fonction/Utilitaire.java</file>
+            <file>file:/C:/Users/ITU/Documents/NetBeansProjects/sprint1/src/java/model/Login.java</file>
+            <file>file:/C:/Users/ITU/Documents/NetBeansProjects/sprint1/src/java/model/Main.java</file>
+            <file>file:/C:/Users/ITU/Documents/NetBeansProjects/sprint1/src/java/etu1912/framework/servlet/FrontServlet.java</file>
+            <file>file:/C:/Users/ITU/Documents/NetBeansProjects/sprint1/web/Affichage/index.jsp</file>
+            <file>file:/C:/Users/ITU/Documents/NetBeansProjects/sprint1/src/java/etu1912/framework/annoter/AnnotationSingle.java</file>
         </group>
     </open-files>
 </project-private>
