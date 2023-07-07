@@ -14,7 +14,10 @@
     <body>
         <h1>Welcome to our FrameWork!</h1>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
         <form action="Sprint1/ajout-emp">
             <p>Nom :</p>
             <input type="text" name="nom">
@@ -22,6 +25,9 @@
             <input type="text" name="mdp">
             <input type="submit" value="Envoyer">   
         </form>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     </body>
 </html>

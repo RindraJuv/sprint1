@@ -6,6 +6,10 @@
 package etu1912.framework;
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+import java.util.HashMap;
+>>>>>>> Stashed changes
 =======
 import java.util.HashMap;
 >>>>>>> Stashed changes
@@ -16,8 +20,11 @@ import java.util.HashMap;
 public class ModelView {
     String view;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 =======
+=======
+>>>>>>> Stashed changes
     HashMap<String,Object> liste = new HashMap<>();
     HashMap<String,Boolean> admin = new HashMap<>();
     boolean isJson = false;
@@ -29,17 +36,23 @@ public class ModelView {
     public void setIsJson(boolean isJson) {
         this.isJson = isJson;
     }
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     public ModelView(String view) {
         this.view = view;
     }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     public String getView() {
         return view;
     }
     
 =======
+=======
+>>>>>>> Stashed changes
     public ModelView(String view, HashMap<String, Object> liste) {
         this.view = view;
         this.liste = liste;
@@ -72,5 +85,8 @@ public class ModelView {
     public void addItemSession(String key, boolean b){
         this.admin.put(key,b);
     }
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 }
