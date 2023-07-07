@@ -1,3 +1,4 @@
+<%@page import="model.Employer"%>
 <%@page import="java.util.Map"%>
 <%@page import="java.util.HashMap"%>
 <%@page import="etu1912.framework.Mapping"%>
@@ -19,16 +20,14 @@
         </style>
     </head>
     <body>
-        <% HashMap<String,Mapping> mappingUrls = new HashMap<>();
-                
-         mappingUrls = (HashMap) request.getAttribute("soratra");%>
-        <p>Bienvenue oooo!!</p>
-        <% for(HashMap.Entry<String, Mapping>entry : mappingUrls.entrySet()){
-            
+        <% 
+            //Employer emp = (Employer) request.getAttribute("detail");  
         %>
-            <p><span>Url dans web-xml : </span><% out.println(entry.getKey());%></p>
-            <p><span>Nom de la classe dans le mapping : </span><% out.println(entry.getValue().getCla());%></p>
-            <p><span>Nom de la method dans le mapping : </span><% out.println(entry.getValue().getMethod());%></p>
-        <% } %>
+        <p>Bienvenue oooo!!</p>
+        
+            <p><span>Nom : </span></p>
+            <p><span>Prenom : </span></p>
+           
+       
     </body>
 </html>

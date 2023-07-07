@@ -46,9 +46,9 @@ public class Utilitaire {
         return packages;
     }
     
-    public Vector<Class> getClassViaPackage(Vector<String> nomPack){
+    public Vector<Class> getClassViaPackage(Vector<String> nomPack, String path){
         Vector<Class> liste = new Vector<Class>(); 
-        String path = "C:\\Users\\ITU\\Documents\\NetBeansProjects\\Sprint1\\build\\web\\WEB-INF\\classes\\";
+        //String path = "C:\\Users\\ITU\\Documents\\NetBeansProjects\\Sprint1\\build\\web\\WEB-INF\\classes\\";
         try{
                 
                 for(int x=2;x<nomPack.size();x++){
@@ -64,7 +64,7 @@ public class Utilitaire {
                     }
                 }
 		}catch(Exception e){
-			e.printStackTrace();
+                    e.printStackTrace();
 		}
        return liste;
     }
@@ -84,12 +84,18 @@ public class Utilitaire {
         }
         
     }
+    
      public void allMapping(HashMap<String, Mapping> mappingUrls){
-         String path = "C:\\Users\\ITU\\Documents\\NetBeansProjects\\Sprint1\\build\\web\\WEB-INF\\classes";
+         //String path = "C:\\Users\\ITU\\Documents\\NetBeansProjects\\Sprint1\\build\\web\\WEB-INF\\classes";
+         String path = this.getClass().getClassLoader().getResource("").getPath();
+         path = path.replaceAll("%20", " ");
          Vector<String> paks = this.getNomPackages(null,path,null);
-         Vector<Class> cla = this.getClassViaPackage(paks);
+         Vector<Class> cla = this.getClassViaPackage(paks,path);
          addMapping(mappingUrls,cla);
-         
+     }
+     public String[] getUrlEnCours(String str){
+         String[] resultat = str.split("/");
+         return resultat;
      }
     
 }
